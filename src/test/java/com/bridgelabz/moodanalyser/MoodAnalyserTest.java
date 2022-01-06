@@ -16,7 +16,7 @@ public class MoodAnalyserTest {
 		Assert.assertEquals("HAPPY",analyser.analyseMood());
 	}
 	@Test
-	public void givenMood_IsNull_ShouldReturnHappy() throws MoodAnalysisException {
+	public void givenMood_IsNull_ShouldReturnMoodAnalysisNullException() throws MoodAnalysisException {
 		MoodAnalyser analyser = new MoodAnalyser(null);
 		try {
 			analyser.analyseMood();
