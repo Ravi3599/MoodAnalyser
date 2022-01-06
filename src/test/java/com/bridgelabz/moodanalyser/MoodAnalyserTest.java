@@ -5,7 +5,11 @@ import org.junit.Test;
 import junit.framework.Assert;
 
 public class MoodAnalyserTest {
-	
+	@Test
+	public void givenMood_IsHappy_ShouldReturnException() {
+		MoodAnalyser analyser = new MoodAnalyser();
+		Assert.assertEquals("HAPPY",analyser.analyseMood());
+	}
 	@Test
 	public void givenMood_IsHappy_ShouldReturnSad() {
 		MoodAnalyser analyser = new MoodAnalyser("I am in Sad mood");
@@ -17,8 +21,8 @@ public class MoodAnalyserTest {
 		Assert.assertEquals("HAPPY",analyser.analyseMood());
 	}
 	@Test
-	public void givenMood_IsHappy_ShouldReturnException() {
-		MoodAnalyser analyser = new MoodAnalyser();
+	public void givenMood_IsNull_ShouldReturnException() {
+		MoodAnalyser analyser = new MoodAnalyser(null);
 		Assert.assertEquals("HAPPY",analyser.analyseMood());
 	}
 }
